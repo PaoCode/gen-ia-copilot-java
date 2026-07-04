@@ -1,7 +1,7 @@
-## PROGRAMA GEN IA COPILOT
-## CALIFICACIONES FINALES
+# PROGRAMA GEN IA COPILOT
+# CALIFICACIONES FINALES
 
-# FUNCIONALIDAD
+## FUNCIONALIDAD
 Proyecto backend construido con Copilot.
 
 Este proyecto consiste en el procesamiento de calificaciones de alumnos, el cual nos indica si el alumno aprobó o reprobó.
@@ -16,7 +16,7 @@ Este proceso batch consiste en lo siguiente:
 
 Adicional, se crearon controladores para exponer endpoints y ver esta información en el navegador. 
 
-# REQUISITOS
+## REQUISITOS
 Java 17
 Spring Batch
 Maven 
@@ -24,7 +24,7 @@ Docker
 MySQL
 MongoDB
 
-# INSTALACIÓN 
+## INSTALACIÓN 
 1.- Clonar el repositorio o descargar el proyecto y descomprimir para abrirlo en tu IDE.
 
 2.- Crear una base de datos en MySQL con el nombre de academia y una tabla llamada estudiantes procesados. 
@@ -43,7 +43,7 @@ Comando verificar conexión
 
 4.- En el archivo application.properties habilitamos el proceso batch, cambiando a true el siguiente campo:
 
-# EJECUCIÓN
+## EJECUCIÓN
 1.- Nos vamos a la terminal del proyecto y ejecutamos el siguiente comando: 
 
 mvn spring-bot: run
