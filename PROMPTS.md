@@ -1,6 +1,6 @@
 La IA Clásica es como un crítico de arte que analiza y clasifica obras existentes.
 La IA Generativa es como un artista que crea obras nuevas a partir de lo que ya ha aprendido estudiando millones de obras previas.
-# Evidencia de uso de GitHub Copilot — <Paola Esquivel>
+# Evidencia de uso de GitHub Copilot — Paola Esquivel
 ## Prompt 1 — pom.xml
 - **Prompt:** Genera un pom.xml para un proyecto Spring Boot 3.2.2 con Java 17 y estas dependencias:
   spring-boot-starter-batch, mysql-connector-j (scope runtime), spring-boot-starter-data-mongodb, springboot-
@@ -10,6 +10,7 @@ La IA Generativa es como un artista que crea obras nuevas a partir de lo que ya 
 - **Resultado:** aceptado, en este paso me di cuenta que por default esta en modo agente, por lo que procedi a modificarlo a modo ask, sin embargo, si valide que haya agregado correctamente las dependencias y versiones solicitadas.
 y posterior, en modo ask(chat) le pedi nuevamente generar el pom.xml, y me genero correctamente el pom.xml con el mismo prompt,y lo compare con el que habia generado y cambiado el agente.
 y solo hubo un par de diferencias en la parte de los datos del proyecto no estaba el campo de descpción y en properties el de project.build.sourceEncoding.
+
 ## Prompt 2 — Modelo Estudiante
 - **Prompt:** // Clase modelo Estudiante con los campos: nombre (String), grupo (String),
   // nota1, nota2, nota3 y promedio (todos double).
@@ -51,8 +52,8 @@ tan claros o evidentes como los que se colocaron en el proyecto de la clase, fin
 - Genera pruebas unitarias con JUnit 5 para EstudianteProcessor y
   ReporteEstudianteProcessor: que verifiquen que el promedio se calcula bien, y que el estado es APROBADO con
   promedio 70 y REPROBADO con 69.9.
-- **Resultado: Copie el del promedio, sin embargo, el del reporte estaba colocando los valores tal cual 70 aprobado y 69.9
-- reprobado por lo que le pedi uno donde tomara los bordes para la validación.
+- **Resultado: Copie el del promedio, sin embargo, el del reporte estaba colocando los valores tal cual 70 aprobado y 69.9 reprobado por lo que le pedi uno donde tomara los bordes para la validación.
+- Nota: La modalidad fue chat y por ello no encontraba el comando, posterior vi que era en chat inline donde se encuentran estos comandos.
 
 ## /fix
 Se corrigieron dos problemas detectados: el promedio se estaba calculando con divisor incorrecto y el mensaje de procesamiento no usaba SLF4J.
@@ -73,13 +74,17 @@ estudiante.setPromedio(promedio);
 log.info("Step 1 - Procesando: {}", estudiante);
 return estudiante;
 }
+
 ## Prompt 5 — Prompt malo vs. bueno (Bloque 3)
 - **Malo:** haz un metodo de reprobados
-- **Bueno:** (el prompt completo con contexto/objetivo/restricciones)
+- **Bueno:** En EstudianteService, genera un método contarReprobados() que devuelva un long con la cantidad de
+estudiantes cuyo promedio sea menor a 70, usando findAll() y Stream API (filter + count), igual en estilo que
+contarAprobados().
 - **Diferencia observada:** En mi caso, solo cuando le di el prompt malo me coloco comentarios especificando como funcionaba
 - el metodo pero de ahí en fuera ambos fueron iguales, pero considero que esto fue así ya por 
-- todo lo que se ha trabajado o he estado revisado en el chat, con eso es que ha tenido mas contexto. 
+- todo lo que se ha trabajado o he estado revisado en el chat, con eso es que ha tenido mas contexto.
+- 
 ## Prompt 6 — Refactor sin romper
 - **Prompt:** Refactoriza este método para que sea más legible sin cambiar su
   comportamiento.
-- **¿Tests siguieron en verde?:** sí todos pasaron exitosamente
+- **¿Tests siguieron en verde?:** sí, todos pasaron exitosamente
